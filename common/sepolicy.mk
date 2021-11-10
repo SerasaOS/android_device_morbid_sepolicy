@@ -30,9 +30,6 @@ BOARD_VENDOR_SEPOLICY_DIRS += \
 
 endif
 
-# Selectively include legacy rules defined by the products
--include device/morbid/sepolicy/legacy-common/sepolicy.mk
-
 # Include atv rules on atv product
 ifeq ($(PRODUCT_IS_ATV), true)
 include device/morbid/sepolicy/atv/sepolicy.mk
