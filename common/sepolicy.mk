@@ -18,11 +18,16 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
 ifeq ($(TARGET_USES_PREBUILT_VENDOR_SEPOLICY), true)
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
     device/morbid/sepolicy/common/dynamic \
-    device/morbid/sepolicy/common/system
+    device/morbid/sepolicy/common/system \
+    hardware/google/pixel-sepolicy/flipendo \
+    hardware/google/pixel-sepolicy/turbo_adapter
 else
 BOARD_VENDOR_SEPOLICY_DIRS += \
     device/morbid/sepolicy/common/dynamic \
-    device/morbid/sepolicy/common/vendor
+    device/morbid/sepolicy/common/vendor \
+    hardware/google/pixel-sepolicy/flipendo \
+    hardware/google/pixel-sepolicy/turbo_adapter
+
 endif
 
 # Selectively include legacy rules defined by the products
