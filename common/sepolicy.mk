@@ -18,16 +18,11 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
 ifeq ($(TARGET_USES_PREBUILT_VENDOR_SEPOLICY), true)
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
     device/morbid/sepolicy/common/dynamic \
-    device/morbid/sepolicy/common/system \
-    hardware/google/pixel-sepolicy/flipendo \
-    hardware/google/pixel-sepolicy/turbo_adapter
+    device/morbid/sepolicy/common/system
 else
 BOARD_VENDOR_SEPOLICY_DIRS += \
     device/morbid/sepolicy/common/dynamic \
-    device/morbid/sepolicy/common/vendor \
-    hardware/google/pixel-sepolicy/flipendo \
-    hardware/google/pixel-sepolicy/turbo_adapter
-
+    device/morbid/sepolicy/common/vendor
 endif
 
 # Include atv rules on atv product
@@ -39,14 +34,14 @@ endif
 TARGET_INCLUDE_PIXEL_SEPOLICY ?= true
 ifeq ($(TARGET_INCLUDE_PIXEL_SEPOLICY), true)
 BOARD_SEPOLICY_DIRS += \
-    device/pixelstar/sepolicy/common/private/google
+    device/morbid/sepolicy/common/private/google
 
 ifeq ($(TARGET_USES_PREBUILT_VENDOR_SEPOLICY), true)
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
-    device/pixelstar/sepolicy/common/system/google
+    device/morbid/sepolicy/common/system/google
 else
 BOARD_VENDOR_SEPOLICY_DIRS += \
-    device/pixelstar/sepolicy/common/vendor/google
+    device/morbid/sepolicy/common/vendor/google
 endif
 
 # Flipendo
